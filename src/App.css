@@ -1,38 +1,212 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2.25rem;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.25rem 0 3.75rem;
+}
+
+.App-header ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0
+}
+
+.App-header li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.App-header a {
+  color: var(--color-text-primary);
+  font-family: var(--font-alt);
+  text-decoration: none;
+}
+
+.App-header a.selected,
+.App-header a:hover {
+  border-bottom: 2px solid var(--color-highlight);
+}
+
+.product__wrapper {
+  display: flex;
+}
+
+.product__misc-info {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+
+.product__misc-info p {
+  align-items: center;
+  display: flex;
+}
+
+.product__misc-info p:first-child svg {
+  margin-right: .5rem;
+}
+
+.product {
+  flex: 0 0 calc(65% - 3rem);
+  margin-right: 3rem;
+  max-width: 63rem;
+}
+
+.product__gallery img {
+  width: 100%;
+}
+
+.product__features {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__details {
+  flex: 0 0 35%;
+}
+
+.product__details p {
+  margin: 0;
+}
+
+.product__details-pay-box {
+  display: flex;
+  margin: 1.5rem 0 2.25rem;
+}
+
+.product__details-pay-box > div {
+  display: flex;
+  flex: 0 0 50%;
+  flex-direction: column;
+  text-align: center;
+}
+
+.product__details-pay-box > div:first-child {
+  border-right: 1px solid #fff;
+}
+
+.pay-important {
+  color: var(--color-important);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.pay-important span {
+  font-size: 1rem;
+}
+
+.prev-price {
+  text-decoration: line-through;
+}
+
+.product__details-pay-box small {
+  font-size: 0.65rem;
+}
+
+.product__details-pay-box small a {
+  color: var(--color-text-primary);
+}
+
+.product__details-ctas {
+  border-bottom: 2px solid #FFF;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.product__details-ctas button:first-child {
+  margin-bottom: .75rem;
+}
+
+/* .product__details-design {} */
+
+.product__details-design .design-step {
+  color: var(--color-secondary);
+  font-family: var(--font-alt);
+  margin-bottom: .4rem;
+}
+
+.product__details-design .design-step-title {
+  font-weight: bold;
+  margin-top: 1.25rem;
+}
+
+.product__details-design-thumbs {
+  display: flex;
+}
+
+.product__details-design-thumbs > div {
+  border-radius: 6px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex: 1 0 calc(33.3333% - 1.25rem);
+  height: 8rem;
+  margin-right: 1.25rem;
+  padding-top: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.product__details-design-thumbs img {
+  max-width: 100%;
+  height: 5rem;
+  object-fit: contain;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.product__details-design-thumbs > div:last-child {
+  margin-right: 0
+}
+
+.product__details-design-thumbs p {
+  background-color: var(--color-gray);
+  font-size: .875rem;
+  margin-top: auto;
+  padding: .66rem 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 64rem) {
+  .App-header {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App-logo {
+    order: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .App-header ul {
+    order: 2;
+  }
+
+  .product__wrapper {
+    flex-direction: column;
+  }
+
+  .product {
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+
+  .product__details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
+  .product__details-ctas {
+    border-bottom: 0 none;
+    order: 10;
+  }
+
+  .product__details-design {
+    margin-top: 2rem;
+    order: 2;
   }
 }

@@ -1,13 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
 body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: Open-Sans, sans-serif;
+  font-weight: 300;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  color: var(--color-secondary);
+  font-family: var(--font-alt);
+  font-size: 2rem;
+  margin: .75rem 0 .25rem;
 }
+
+button {
+  border: 0 none;
+  cursor: pointer;
+  font-family: var(--font-alt);
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: var(--color-highlight);
+  border-radius: 6px;
+  color: #FFF;
+  font-size: 1.25rem;
+  padding: .65rem 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-link {
+  background-color: transparent;
+  border-bottom: 2px solid var(--color-highlight);
+  color: var(--color-text-primary);
+  font-size: .875rem;
+}
+
+:root {
+  --color-background: #F2F2F2;
+  --color-secondary: #0547A0;
+  --color-highlight: #0D6EF0;
+  --color-important: red;
+  --color-gray: #E8E8E8;
+  --color-text-primary: #444;
+  --font-alt: Bungee;
+  --max-width: 90rem;
+}
+
